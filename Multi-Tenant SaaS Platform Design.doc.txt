@@ -1,0 +1,31 @@
+Each company will have its own subdomain or custom domain.
+
+For example:
+Company A: cool-games.com
+Company B: luck-games.co.uk
+
+creat a user table(user_id,email,password,company_id) we are adding company_id ,becouse we want to understand when user logs in,they only access their own company's website(forexample gets a token that says`
+company_id = 1, when the user visits cool-games.com.For  luck-games.co.uk this gets a  the token for company_id = 2 ).  
+db schema
+Users Table:
+
+Stores user information.
+Fields: user_id, email, password, company_id.
+Gaming Companies Table:
+
+Stores information about each gaming company.
+Fields: company_id, company_name.
+User-Company Relationship:
+
+Connects users to companies.
+Fields: user_id, company_id.
+Games Table:
+
+Stores information about games.
+Fields: game_id, game_name.
+User-Game Relationship:
+
+Connects users to games they play.
+Fields: user_id, game_id
+
+By following these steps and examples, you can turn a single web-based platform into a multi-tenant SaaS platform that can serve multiple gaming companies.
